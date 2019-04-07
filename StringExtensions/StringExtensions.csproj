@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0;netstandard1.1;netstandard1.2;netstandard1.3;netstandard1.4;netstandard1.5;netstandard1.6;netstandard2.0;</TargetFrameworks>
+    <RootNamespace>Morts.StringExtensions</RootNamespace>
+    <Description>Various extension methods that i often find my self writing again and again</Description>
+    <Copyright>None</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>string extensions utility Morts.StringExtensions</PackageTags>
+    <PackageReleaseNotes>
+      * Initial version.
+    </PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/Toudahl/StringExtensions</RepositoryUrl>
+    <Authors>Morten Toudahl</Authors>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+  </PropertyGroup>
+  
+
+</Project>
