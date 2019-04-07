@@ -114,7 +114,7 @@ namespace StringExtensions.Tests
         public void ThrowIfWhitespace_OnlyWhitespace_ShouldThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfWhitespace(null);
+            Action act = () => input.ThrowIfWhitespace(input);
 
             //ASSERT
             act.Should()
@@ -143,7 +143,7 @@ namespace StringExtensions.Tests
         public void ThrowIfWhitespace_NotOnlyWhitespace_ShouldNotThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfWhitespace(null);
+            Action act = () => input.ThrowIfWhitespace(input);
 
             //ASSERT
             act.Should()
@@ -163,7 +163,7 @@ namespace StringExtensions.Tests
         public void ThrowIfWhitespace_NullOrEmpty_ShouldNotThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfWhitespace(null);
+            Action act = () => input.ThrowIfWhitespace(input);
 
             //ASSERT
             act.Should()
@@ -199,7 +199,7 @@ namespace StringExtensions.Tests
         public void ThrowIfNull_InputIsNotNull_ShouldNotThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfNull(null);
+            Action act = () => input.ThrowIfNull(input);
 
             //ASSERT
             act.Should()
@@ -235,7 +235,7 @@ namespace StringExtensions.Tests
         public void ThrowIfEmpty_InputIsNotEmpty_ShouldNotThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfEmpty(null);
+            Action act = () => input.ThrowIfEmpty(input);
 
             //ASSERT
             act.Should()
@@ -263,7 +263,7 @@ namespace StringExtensions.Tests
         public void ThrowIfNullEmptyOrWhitespace_IsNotNullEmptyOrWhitespace_ShouldNotThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfNullEmptyOrWhitespace(null);
+            Action act = () => input.ThrowIfNullEmptyOrWhitespace(input);
 
             //ASSERT
             act.Should()
@@ -286,7 +286,7 @@ namespace StringExtensions.Tests
         public void ThrowIfNullEmptyOrWhitespace_IsEmptyOrWhitespace_ShouldThrow(string input)
         {
             //ACT
-            Action act = () => input.ThrowIfNullEmptyOrWhitespace(null);
+            Action act = () => input.ThrowIfNullEmptyOrWhitespace(input);
 
             //ASSERT
             act.Should()

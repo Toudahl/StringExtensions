@@ -166,19 +166,6 @@ namespace StringExtensions.Tests
             result.Should().BeFalse();
         }
 
-        [Fact]
-        [Trait("Category", "Unit")]
-        public void UnitOfWork_Scenario_ExpectedBehavior()
-        {
-            //ARRANGE
-            
-
-            //ACT
-
-            //ASSERT
-
-        }
-
         [ExcludeFromCodeCoverage]
         public static IEnumerable<object[]> IsNotNullEmptyOrWhitespace => new List<object[]>
         {
