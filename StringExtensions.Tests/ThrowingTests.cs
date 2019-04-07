@@ -300,7 +300,7 @@ namespace StringExtensions.Tests
             //ARRANGE
             var input = (string) null;
             //ACT
-            Action act = () => input.ThrowIfNullEmptyOrWhitespace(null);
+            Action act = () => input.ThrowIfNullEmptyOrWhitespace(input);
 
             //ASSERT
             act.Should()

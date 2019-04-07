@@ -196,6 +196,7 @@ namespace StringExtensions.Tests
         [ExcludeFromCodeCoverage]
         public static IEnumerable<object[]> IsEmptyOrWhitespace => new List<object[]>
         {
+            new object[]{null},
             new object[]{string.Empty},
             new object[]{" "},
             new object[]{"  "},
@@ -206,21 +207,8 @@ namespace StringExtensions.Tests
         [Theory]
         [Trait("Category", "Unit")]
         [MemberData(nameof(IsEmptyOrWhitespace))]
-        public void IsNullEmptyOrWhitespace_IsEmptyOrWhitespace_ShouldBeTrue(string input)
+        public void IsNullEmptyOrWhitespace_InputIsNullEmptyOrWhitespace_ShouldBeTrue(string input)
         {
-            //ACT
-            var result = input.IsNullEmptyOrWhitespace();
-
-            //ASSERT
-            result.Should().BeTrue();
-        }
-
-        [Fact]
-        [Trait("Category", "Unit")]
-        public void IsNullEmptyOrWhitespace_IsNull_ShouldBeTrue()
-        {
-            //ARRANGE
-            var input = (string)null;
             //ACT
             var result = input.IsNullEmptyOrWhitespace();
 
