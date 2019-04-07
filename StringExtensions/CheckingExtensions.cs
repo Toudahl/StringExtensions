@@ -2,14 +2,26 @@
 
 namespace Morts.StringExtensions
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class CheckingExtensions
     {
+        /// <summary>
+        /// Will indicate if the string is null, empty or whitespace
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsNullEmptyOrWhitespace(this string input) =>
+            input.IsNull() || input.IsEmpty() || input.IsWhitespace();
+
+
         /// <summary>
         /// Will indicate if the string is null or not
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static bool IsNull(this string input) => input is null;
+        internal static bool IsNull(this string input) => input is null;
 
         /// <summary>
         /// Will indicate if the string is empty or not.
@@ -17,16 +29,16 @@ namespace Morts.StringExtensions
         /// <param name="input"></param>
         /// <returns></returns>
         /// <exception cref="NullReferenceException"></exception>
-        public static bool IsEmpty(this string input) => input.Length == 0;
+        internal static bool IsEmpty(this string input) => input.Length == 0;
 
         /// <summary>
-        /// Will indicate if the string is empty or not.
+        /// Will indicate if the string is whitespace or not.
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         /// <exception cref="NullReferenceException"></exception>
         /// <exception cref="IndexOutOfRangeException"></exception>
-        public static bool IsWhitespace(this string input)
+        internal static bool IsWhitespace(this string input)
         {
             var lastCharIndex = input.Length;
             var firstCharIndex = 0;
@@ -52,13 +64,6 @@ namespace Morts.StringExtensions
             }
         }
 
-        /// <summary>
-        /// Will indicate if the string is null, empty or whitespace
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static bool IsNullEmptyOrWhitespace(this string input) =>
-            input.IsNull() || input.IsEmpty() || input.IsWhitespace();
 
     }
 }

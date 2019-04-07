@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Morts.StringExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:Morts.StringExtensions.CheckingExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.CheckingExtensions.IsNullEmptyOrWhitespace(System.String)">
+            <summary>
+            Will indicate if the string is null, empty or whitespace
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Morts.StringExtensions.CheckingExtensions.IsNull(System.String)">
+            <summary>
+            Will indicate if the string is null or not
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Morts.StringExtensions.CheckingExtensions.IsEmpty(System.String)">
+            <summary>
+            Will indicate if the string is empty or not.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="M:Morts.StringExtensions.CheckingExtensions.IsWhitespace(System.String)">
+            <summary>
+            Will indicate if the string is whitespace or not.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException"></exception>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="T:Morts.StringExtensions.ReturnOrThrowExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfNullEmptyOrWhitespace(System.String,System.String)">
+            <summary>
+            Will throw an exception if the input is either null, empty or whitespace only. Otherwise the input will be returned as is.
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfNull(System.String,System.String)">
+            <summary>
+            Will throw an exception if the input is null. Otherwise the input will be returned as is.
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfEmpty(System.String,System.String)">
+            <summary>
+            Will throw an exception if the input is empty. Otherwise the input will be returned as is.
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfWhitespace(System.String,System.String)">
+            <summary>
+            Will throw an exception if the input is whitespace only. Otherwise the input will be returned as is.
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Morts.StringExtensions.ThrowingExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfNullEmptyOrWhitespace(System.String,System.String)">
+            <summary>
+            Will throw an exception if the input is either null, empty or whitespace only
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfNull(System.String,System.String)">
+            <summary>
+            Will throw if the string is null
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfEmpty(System.String,System.String)">
+            <summary>
+            Throw if the string is empty. Will not throw if null.
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfWhitespace(System.String,System.String)">
+            <summary>
+            Throw if the string is whitespace only. Will not throw if null or empty
+            </summary>
+            <param name="input"></param>
+            <param name="paramName"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+    </members>
+</doc>

@@ -2,6 +2,9 @@
 
 namespace Morts.StringExtensions
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ReturnOrThrowExtensions
     {
         /// <summary>
@@ -21,7 +24,7 @@ namespace Morts.StringExtensions
         /// <param name="input"></param>
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public static string ReturnOrThrowIfNull(this string input, string paramName)
+        internal static string ReturnOrThrowIfNull(this string input, string paramName)
         {
             input.ThrowIfNull(paramName);
             return input;
@@ -32,7 +35,7 @@ namespace Morts.StringExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <param name="paramName"></param>
-        public static string ReturnOrThrowIfEmpty(this string input, string paramName)
+        internal static string ReturnOrThrowIfEmpty(this string input, string paramName)
         {
             input.ThrowIfEmpty(paramName);
             return input;
@@ -44,7 +47,7 @@ namespace Morts.StringExtensions
         /// <param name="input"></param>
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentException"></exception>
-        public static string ReturnOrThrowIfWhitespace(this string input, string paramName)
+        internal static string ReturnOrThrowIfWhitespace(this string input, string paramName)
         {
             input.ThrowIfWhitespace(paramName);
             return input;
