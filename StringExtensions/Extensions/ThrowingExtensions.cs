@@ -3,7 +3,7 @@
 namespace Morts.StringExtensions
 {
     /// <summary>
-    /// 
+    /// Extension methods that throws an exception if there are an issue with the input
     /// </summary>
     public static class ThrowingExtensions
     {
@@ -12,6 +12,8 @@ namespace Morts.StringExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <param name="paramName"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static void ThrowIfNullEmptyOrWhitespace(this string input, string paramName)
         {
             input.ThrowIfNull(paramName);
@@ -49,13 +51,12 @@ namespace Morts.StringExtensions
         /// <exception cref="ArgumentException"></exception>
         internal static void ThrowIfWhitespace(this string input, string paramName)
         {
-            if (input is null || input.Length == 0) return;
+            if (input.IsNull() || input.IsEmpty()) return;
 
             if (input.IsWhitespace())
             {
                 throw new ArgumentException($"{paramName} cannot be whitespace only", paramName);
             }
         }
-
     }
 }

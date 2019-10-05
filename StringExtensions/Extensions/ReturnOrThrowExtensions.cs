@@ -3,7 +3,7 @@
 namespace Morts.StringExtensions
 {
     /// <summary>
-    /// 
+    /// Extension methods that either returns the value, or throws an exception detailing the problem with the input.
     /// </summary>
     public static class ReturnOrThrowExtensions
     {
@@ -12,6 +12,8 @@ namespace Morts.StringExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <param name="paramName"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static string ReturnOrThrowIfNullEmptyOrWhitespace(this string input, string paramName)
         {
             input.ThrowIfNullEmptyOrWhitespace(paramName);

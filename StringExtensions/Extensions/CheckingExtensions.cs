@@ -3,7 +3,7 @@
 namespace Morts.StringExtensions
 {
     /// <summary>
-    /// 
+    /// Extension methods that only checks, and returns a bool indicating the result
     /// </summary>
     public static class CheckingExtensions
     {
@@ -14,7 +14,6 @@ namespace Morts.StringExtensions
         /// <returns></returns>
         public static bool IsNullEmptyOrWhitespace(this string input) =>
             input.IsNull() || input.IsEmpty() || input.IsWhitespace();
-
 
         /// <summary>
         /// Will indicate if the string is null or not
@@ -63,7 +62,5 @@ namespace Morts.StringExtensions
                 firstCharIndex++;
             }
         }
-
-
     }
 }
