@@ -9,16 +9,14 @@
     <Description>Various extension methods that i often find my self writing again and again</Description>
     <Copyright>None</Copyright>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>string extensions utility Morts.StringExtensions</PackageTags>
-    <PackageReleaseNotes>
-      * Initial version.
-    </PackageReleaseNotes>
+    <PackageTags>Morts string extensions utility Morts.StringExtensions</PackageTags>
+    <PackageReleaseNotes>Added ValueString</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Toudahl/StringExtensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Toudahl/StringExtensions</RepositoryUrl>
     <Authors>Morten Toudahl</Authors>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0</Version>
-    <FileVersion>1.0.0</FileVersion>
+    <Version>1.1.0</Version>
+    <FileVersion>1.1.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup>

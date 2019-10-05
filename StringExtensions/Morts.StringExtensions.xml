@@ -6,7 +6,7 @@
     <members>
         <member name="T:Morts.StringExtensions.CheckingExtensions">
             <summary>
-            
+            Extension methods that only checks, and returns a bool indicating the result
             </summary>
         </member>
         <member name="M:Morts.StringExtensions.CheckingExtensions.IsNullEmptyOrWhitespace(System.String)">
@@ -42,7 +42,7 @@
         </member>
         <member name="T:Morts.StringExtensions.ReturnOrThrowExtensions">
             <summary>
-            
+            Extension methods that either returns the value, or throws an exception detailing the problem with the input.
             </summary>
         </member>
         <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfNullEmptyOrWhitespace(System.String,System.String)">
@@ -51,6 +51,8 @@
             </summary>
             <param name="input"></param>
             <param name="paramName"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:Morts.StringExtensions.ReturnOrThrowExtensions.ReturnOrThrowIfNull(System.String,System.String)">
             <summary>
@@ -77,7 +79,7 @@
         </member>
         <member name="T:Morts.StringExtensions.ThrowingExtensions">
             <summary>
-            
+            Extension methods that throws an exception if there are an issue with the input
             </summary>
         </member>
         <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfNullEmptyOrWhitespace(System.String,System.String)">
@@ -86,6 +88,8 @@
             </summary>
             <param name="input"></param>
             <param name="paramName"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:Morts.StringExtensions.ThrowingExtensions.ThrowIfNull(System.String,System.String)">
             <summary>
@@ -110,6 +114,66 @@
             <param name="input"></param>
             <param name="paramName"></param>
             <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Morts.StringExtensions.ValueString">
+            <summary>
+            Represents a string that cannot be whitespace only, and must contain at least one char.
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.#ctor(System.String)">
+            <summary>
+            Use the implicit operator instead.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.op_Implicit(Morts.StringExtensions.ValueString)~System.String">
+            <summary>
+            Converts the <see cref="T:Morts.StringExtensions.ValueString"/> to a <see cref="T:System.String"/>
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.op_Implicit(System.String)~Morts.StringExtensions.ValueString">
+            <summary>
+            Converts the <see cref="T:System.String"/> to a <see cref="T:Morts.StringExtensions.ValueString"/>
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.ToString">
+            <summary>
+            Returns the value of the encapsulated <see cref="T:System.String"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.Equals(Morts.StringExtensions.ValueString)">
+            <summary>
+            Compare to <see cref="T:Morts.StringExtensions.ValueString"/>
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.Equals(Morts.StringExtensions.ValueString,System.StringComparison)">
+            <summary>
+            Compare to <see cref="T:Morts.StringExtensions.ValueString"/> using a <see cref="T:System.StringComparison"/>
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.Equals(System.String)">
+            <summary>
+            Compare to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.Equals(System.String,System.StringComparison)">
+            <summary>
+            Compare to <see cref="T:System.String"/> using a <see cref="T:System.StringComparison"/>
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.Equals(System.Object)">
+            <summary>
+            Compare to <see cref="T:System.Object"/>
+            </summary>
+        </member>
+        <member name="M:Morts.StringExtensions.ValueString.GetHashCode">
+            <summary>
+            Gets the hashcode from the encapsulated string
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>
