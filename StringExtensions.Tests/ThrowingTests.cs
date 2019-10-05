@@ -16,7 +16,6 @@ namespace StringExtensions.Tests
             new object[]{" "},
             new object[]{null},
             new object[]{string.Empty},
-
         };
 
         [Theory]
@@ -306,6 +305,5 @@ namespace StringExtensions.Tests
             act.Should()
                 .ThrowExactly<ArgumentNullException>();
         }
-
     }
 }

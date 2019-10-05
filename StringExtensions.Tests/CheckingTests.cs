@@ -215,6 +215,5 @@ namespace StringExtensions.Tests
             //ASSERT
             result.Should().BeTrue();
         }
-
     }
 }
