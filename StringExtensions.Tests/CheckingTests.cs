@@ -14,10 +14,10 @@ namespace StringExtensions.Tests
         public void IsEmpty_InputIsNull_ShouldThrow()
         {
             //ARRANGE
-            var input = (string) null;
+            var input = (string?) null;
 
             //ACT
-            Action act = () => input.IsEmpty();
+            Action act = () => input!.IsEmpty();
 
             //ASSERT
             act.Should().ThrowExactly<NullReferenceException>();
@@ -28,7 +28,7 @@ namespace StringExtensions.Tests
         public void IsWhitespace_InputIsNull_ShouldThrow()
         {
             //ARRANGE
-            var input = (string) null;
+            var input = (string?) null;
 
             //ACT
             Action act = () => input.IsWhitespace();
@@ -104,7 +104,7 @@ namespace StringExtensions.Tests
         public void IsNull_InputIsNull_ShouldBeTrue()
         {
             //ARRANGE
-            var input = (string)null;
+            var input = (string?)null;
 
             //ACT
             var result = input.IsNull();

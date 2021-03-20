@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Morts.StringExtensions
 {
@@ -14,7 +15,7 @@ namespace Morts.StringExtensions
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
-        public static void ThrowIfNullEmptyOrWhitespace(this string input, string paramName)
+        public static void ThrowIfNullEmptyOrWhitespace([NotNull]this string? input, string paramName)
         {
             input.ThrowIfNull(paramName);
             input.ThrowIfEmpty(paramName);
@@ -27,10 +28,12 @@ namespace Morts.StringExtensions
         /// <param name="input"></param>
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        internal static void ThrowIfNull(this string input, string paramName)
+        internal static void ThrowIfNull([NotNull]this string? input, string paramName)
         {
             if(input.IsNull()) throw new ArgumentNullException(paramName,$"{paramName} cannot be null");
+#pragma warning disable 8777
         }
+#pragma warning restore 8777
 
         /// <summary>
         /// Throw if the string is empty. Will not throw if null.
@@ -40,7 +43,7 @@ namespace Morts.StringExtensions
         /// <exception cref="ArgumentException"></exception>
         internal static void ThrowIfEmpty(this string input, string paramName)
         {
-            if (input?.Length == 0) throw new ArgumentException($"{paramName} cannot be empty", paramName);
+            if (input.Length == 0) throw new ArgumentException($"{paramName} cannot be empty", paramName);
         }
 
         /// <summary>
@@ -51,8 +54,10 @@ namespace Morts.StringExtensions
         /// <exception cref="ArgumentException"></exception>
         internal static void ThrowIfWhitespace(this string input, string paramName)
         {
-            if (input.IsNull() || input.IsEmpty()) return;
-
+            if (input.IsEmpty())
+            {
+                return;
+            }
             if (input.IsWhitespace())
             {
                 throw new ArgumentException($"{paramName} cannot be whitespace only", paramName);

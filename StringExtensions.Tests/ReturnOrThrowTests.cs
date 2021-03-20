@@ -14,7 +14,6 @@ namespace StringExtensions.Tests
         {
             new object[]{"something"},
             new object[]{" "},
-            new object[]{null},
             new object[]{string.Empty},
         };
 
@@ -44,7 +43,7 @@ namespace StringExtensions.Tests
         public void ThrowIfNull_ExceptionIsThrown_ParamNameShouldBeSetCorrectly(string expectedParameterName)
         {
             //ARRANGE
-            var input = (string)null;
+            var input = (string?)null;
 
             //ACT
             Action act = () => input.ReturnOrThrowIfNull(expectedParameterName);
@@ -148,18 +147,12 @@ namespace StringExtensions.Tests
             result.Should().Be(input);
         }
 
-        [ExcludeFromCodeCoverage]
-        public static IEnumerable<object[]> NullOrEmpty => new List<object[]>
-        {
-            new object[]{string.Empty},
-            new object[]{null},
-        };
 
-        [Theory]
+        [Fact]
         [Trait("Category", "Unit")]
-        [MemberData(nameof(NullOrEmpty))]
-        public void ThrowIfWhitespace_NullOrEmpty_ShouldNotThrow(string input)
+        public void ThrowIfWhitespace_NullOrEmpty_ShouldNotThrow()
         {
+            var input = string.Empty;
             //ACT
             var result = input.ReturnOrThrowIfWhitespace(input);
 
@@ -220,7 +213,6 @@ namespace StringExtensions.Tests
         [ExcludeFromCodeCoverage]
         public static IEnumerable<object[]> NotEmptyInput => new List<object[]>
         {
-            new object[]{null},
             new object[]{" "},
             new object[]{"adfd"},
         };

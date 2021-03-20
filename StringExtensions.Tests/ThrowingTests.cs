@@ -123,7 +123,6 @@ namespace StringExtensions.Tests
         [ExcludeFromCodeCoverage]
         public static IEnumerable<object[]> NotOnlyWhitespace => new List<object[]>
         {
-            new object[]{string.Empty},
             new object[]{" a"},
             new object[]{" a "},
             new object[]{"adfdaf"},
@@ -149,18 +148,11 @@ namespace StringExtensions.Tests
                 .NotThrow();
         }
 
-        [ExcludeFromCodeCoverage]
-        public static IEnumerable<object[]> NullOrEmpty => new List<object[]>
-        {
-            new object[]{string.Empty},
-            new object[]{null},
-        };
-
-        [Theory]
+        [Fact]
         [Trait("Category", "Unit")]
-        [MemberData(nameof(NullOrEmpty))]
-        public void ThrowIfWhitespace_NullOrEmpty_ShouldNotThrow(string input)
+        public void ThrowIfWhitespace_Empty_ShouldNotThrow()
         {
+            var input = string.Empty;
             //ACT
             Action act = () => input.ThrowIfWhitespace(input);
 
@@ -223,7 +215,6 @@ namespace StringExtensions.Tests
         [ExcludeFromCodeCoverage]
         public static IEnumerable<object[]> NotEmptyInput => new List<object[]>
         {
-            new object[]{null},
             new object[]{" "},
             new object[]{"adfd"},
         };

@@ -52,7 +52,7 @@ namespace Morts.StringExtensions
         /// <summary>
         /// Compare to <see cref="string"/>
         /// </summary>
-        public bool Equals(string other) => _value.Equals(other);
+        public bool Equals(string? other) => _value.Equals(other);
 
         /// <summary>
         /// Compare to <see cref="string"/> using a <see cref="StringComparison"/>
@@ -62,7 +62,7 @@ namespace Morts.StringExtensions
         /// <summary>
         /// Compare to <see cref="object"/>
         /// </summary>
-        public override bool Equals(object other) => other is ValueString o ? Equals(o._value) : _value.Equals(other);
+        public override bool Equals(object? other) => other is ValueString o ? Equals(o._value) : _value.Equals(other);
 
         /// <summary>
         /// Gets the hashcode from the encapsulated string

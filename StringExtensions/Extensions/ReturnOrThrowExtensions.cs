@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Morts.StringExtensions
 {
@@ -14,7 +15,7 @@ namespace Morts.StringExtensions
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
-        public static string ReturnOrThrowIfNullEmptyOrWhitespace(this string input, string paramName)
+        public static string ReturnOrThrowIfNullEmptyOrWhitespace([NotNull] this string? input, string paramName)
         {
             input.ThrowIfNullEmptyOrWhitespace(paramName);
             return input;
@@ -26,7 +27,7 @@ namespace Morts.StringExtensions
         /// <param name="input"></param>
         /// <param name="paramName"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        internal static string ReturnOrThrowIfNull(this string input, string paramName)
+        internal static string ReturnOrThrowIfNull([NotNull] this string? input, string paramName)
         {
             input.ThrowIfNull(paramName);
             return input;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Morts.StringExtensions
 {
@@ -12,15 +13,15 @@ namespace Morts.StringExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static bool IsNullEmptyOrWhitespace(this string input) =>
-            input.IsNull() || input.IsEmpty() || input.IsWhitespace();
+        public static bool IsNullEmptyOrWhitespace([NotNullWhen(true)] this string? input) =>
+            input.IsNull() || input!.IsEmpty() || input!.IsWhitespace();
 
         /// <summary>
         /// Will indicate if the string is null or not
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        internal static bool IsNull(this string input) => input is null;
+        internal static bool IsNull([NotNullWhen(true)] this string? input) => input is null;
 
         /// <summary>
         /// Will indicate if the string is empty or not.
