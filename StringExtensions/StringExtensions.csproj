@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;netstandard1.1;netstandard1.2;netstandard1.3;netstandard1.4;netstandard1.5;netstandard1.6;netstandard2.0;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+    <nullable>enable</nullable>
     <Title>Mortens string extensions</Title>
     <RootNamespace>Morts.StringExtensions</RootNamespace>
     <AssemblyName>Morts.StringExtensions</AssemblyName>
@@ -10,13 +11,13 @@
     <Copyright>None</Copyright>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Morts string extensions utility Morts.StringExtensions</PackageTags>
-    <PackageReleaseNotes>Added ValueString</PackageReleaseNotes>
+    <PackageReleaseNotes>Enable nullable reference types. Only suport netstandard2.1 and net5.0</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Toudahl/StringExtensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Toudahl/StringExtensions</RepositoryUrl>
     <Authors>Morten Toudahl</Authors>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.1.0</Version>
-    <FileVersion>1.1.0</FileVersion>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <Version>2.0.0</Version>
+    <FileVersion>2.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup>
